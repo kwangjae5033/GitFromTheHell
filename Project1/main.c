@@ -36,9 +36,12 @@ while(fgets(input, sizeof(input), stdin)!= NULL){
     if(is_number){
         int reverse = 0; 
         int sort = 0;
-        reverse = reverse_digits(atoi(input));
+        bool prime;
+	    reverse = reverse_digits(atoi(input));
         sort = sort_digits(atoi(input));
+        prime=isPrime(atoi(input));
         printf("reverse> %d\nsort> %d\n", reverse, sort);
+        (prime==true)? printf("true\n"): printf("false\n");
     }
    
   }
