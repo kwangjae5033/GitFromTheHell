@@ -10,6 +10,8 @@
 
 int reverse_digits(int n);
 int sort_digits(int n); 
+char *toBinary(int n); 
+bool isPrime(int n); 
 
 int main (void){
 
@@ -34,13 +36,12 @@ while(fgets(input, sizeof(input), stdin)!= NULL){
     }
 
     if(is_number){
-        int reverse = 0; 
-        int sort = 0;
-        bool prime;
-	    reverse = reverse_digits(atoi(input));
-        sort = sort_digits(atoi(input));
-        prime=isPrime(atoi(input));
-        printf("reverse> %d\nsort> %d\n", reverse, sort);
+        
+        int  reverse = reverse_digits(atoi(input));
+        int  sort = sort_digits(atoi(input));
+        char *pointer = toBinary(atoi(input));  
+        bool  prime=isPrime(atoi(input));
+        printf("reverse> %d\nsort> %d\nbinary> %s\n", reverse, sort, pointer);
         (prime==true)? printf("true\n"): printf("false\n");
     }
    
