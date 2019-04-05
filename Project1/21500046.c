@@ -22,12 +22,12 @@ char *toBinary(int n){
    char *pointer = NULL;
    b = d = count = 0;
 
-   pointer = (char*)malloc(16+1);
+   pointer = (char*)malloc(23+1);
 
    if (pointer == NULL)
       exit(EXIT_FAILURE);
 
-   for (b = 15 ; b >= 0 ; b--)
+   for (b = 23 ; b >= 0 ; b--)
    {
       d = n >> b;
 
